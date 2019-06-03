@@ -42,4 +42,17 @@ typedef NSUInteger SVInfiniteScrollingState;
 - (void)startAnimating;
 - (void)stopAnimating;
 
+/**
+   當LoadMore出現網路錯誤時，需重置上拉狀態讓 indicator 出現
+*/
+@property (nonatomic, assign) BOOL needDragToLoadMore;
+
+- (void)disableInfiniteScrolling;
+
+- (void)resetOriginalBottomInset:(CGFloat)bottomInset;
+
+- (void)refreshIndicatorView;
+
+- (void)showIndicatorView;
+
 @end
